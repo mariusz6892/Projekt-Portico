@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='utf-8'?>
+<objectModel 
+ xmlns='http://standards.ieee.org/IEEE1516-2010'
+ xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+ xsi:schemaLocation='http://standards.ieee.org/IEEE1516-2010 http://standards.ieee.org/downloads/1516/1516.2-2010/IEEE1516-DIF-2010.xsd'  >
+	<modelIdentification>
+		<name>FOM</name>
+		<type>FOM</type>
+		<version>1.0</version>
+	</modelIdentification>
+	<objects>
+		<objectClass>
+			<name>HLAobjectRoot</name>
+			<objectClass>
+				<name>Samochod</name>
+				<sharing>PublishSubscribe</sharing>
+				<semantics>Samochód wygenerowany</semantics>
+				<attribute>
+					<name>Nr_samochodu</name>
+					<updateType>Static</updateType>
+					<ownership>Divest</ownership>
+					<sharing>PublishSubscribe</sharing>
+					<order>Receive</order>
+					<semantics>Opisuje nr samochodu</semantics>
+				</attribute>
+				<attribute>
+					<name>Uprzywilejowany</name>
+					<updateType>Static</updateType>
+					<updateCondition>On Change</updateCondition>
+					<ownership>NoTransfer</ownership>
+					<sharing>PublishSubscribe</sharing>
+					<order>Receive</order>
+					<semantics>Czy samochód jest uprzywilejowany</semantics>
+				</attribute>
+				<attribute>
+					<name>Kierunek_jazdy</name>
+					<updateType>NA</updateType>
+					<updateCondition>On Change</updateCondition>
+					<ownership>Divest</ownership>
+					<sharing>PublishSubscribe</sharing>
+					<order>Receive</order>
+					<semantics>Określa kierunek jazdy samochodu</semantics>
+				</attribute>
+				<attribute>
+					<name>Aktualna_pozycja</name>
+					<updateType>NA</updateType>
+					<updateCondition>On Change</updateCondition>
+					<ownership>Divest</ownership>
+					<sharing>PublishSubscribe</sharing>
+					<order>Receive</order>
+					<semantics>Określa skąd samochód jedzie</semantics>
+				</attribute>
+			</objectClass>
+			<objectClass>
+				<name>Sygnalizator</name>
+				<sharing>PublishSubscribe</sharing>
+				<semantics>Sygnalizator świetlny nr 0 dla drogi 0 oraz 2, nr 1 dla drogi 1 oraz 3</semantics>
+				<attribute>
+					<name>Nr_sygnalizatora</name>
+					<updateType>Static</updateType>
+					<updateCondition>NA</updateCondition>
+					<ownership>NoTransfer</ownership>
+					<sharing>PublishSubscribe</sharing>
+					<order>Receive</order>
+					<semantics>Numer sygnalizatora</semantics>
+				</attribute>
+				<attribute>
+					<name>Swiatlo</name>
+					<updateType>Static</updateType>
+					<ownership>NoTransfer</ownership>
+					<sharing>PublishSubscribe</sharing>
+					<order>Receive</order>
+					<semantics>Określa kolor światła</semantics>
+				</attribute>
+			</objectClass>
+		</objectClass>
+	</objects>
+	<interactions>
+		<interactionClass>
+			<name>HLAinteractionRoot</name>
+		</interactionClass>
+	</interactions>
+	<dimensions/>
+	<synchronizations/>
+	<transportations/>
+	<updateRates/>
+	<dataTypes>
+		<basicDataRepresentations/>
+		<simpleDataTypes/>
+		<enumeratedDataTypes/>
+		<arrayDataTypes/>
+		<fixedRecordDataTypes/>
+		<variantRecordDataTypes/>
+	</dataTypes>
+	<notes/>
+</objectModel>
